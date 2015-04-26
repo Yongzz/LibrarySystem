@@ -2,71 +2,85 @@ package za.ac.cput.LibrarySystem.domain.Impl;
 
 import za.ac.cput.LibrarySystem.domain.LibraryItem;
 
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by student on 2015/04/17.
  */
+@Entity
 public class Book implements LibraryItem, Serializable {
-    Long ID;
-    String tittle;
-    String subject;
-    String type;
-    String ISBN;
-    String publisher;
-    int publishDate;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long ID;
+    private String tittle;
+    private String subject;
+    //private String type;
+    @Column(unique = true)
+    private String ISBN;
+    @ManyToMany
+    @JoinColumn(name = "book_id")
+    private List<Author> authors = new ArrayList<Author>();
+    private Publisher publisher;
+    private List<Copy> copies = new ArrayList<Copy>();
 
     private Book(){}
     public Book(Builder builder){
         ID = builder.ID;
         tittle = builder.tittle;
         subject = builder.subject;
-        type = builder.type;
+        //type = builder.type;
         ISBN = builder.ISBN;
         publisher = builder.publisher;
-        publishDate = builder.publishDate;
+        authors = builder.authors;
+        copies = builder.copies;
+
     }
 
     public String getISBN() {
         return ISBN;
     }
 
-    public String getPublisher() {
+    public Publisher getPublisher() {
         return publisher;
     }
 
-    public int getPublishDate() {
-        return publishDate;
+    public List<Author> getAuthors() {
+        return authors;
     }
 
-    @Override
-    public String getType() {
+    public List<Copy> getCopies() {
+        return copies;
+    }
+
+    /*public String getType() {
         return type;
-    }
+    }*/
 
-    @Override
     public String getSubject() {
         return subject;
     }
 
-    @Override
     public String getTittle() {
         return tittle;
     }
 
-    @Override
+
     public Long getID() {
         return ID;
     }
 
     public static class Builder{
-        Long ID;
-        String tittle;
-        String subject;
-        String type;
-        String ISBN;
-        String publisher;
-        int publishDate;
+        private Long ID;
+        private String tittle;
+        private String subject;
+       // private String type;
+        private String ISBN;
+        private Publisher publisher;
+        private List<Author> authors = new ArrayList<Author>();
+        private List<Copy> copies = new ArrayList<Copy>();
 
         public Builder(String ISBN){
             this.ISBN = ISBN;
@@ -86,17 +100,35 @@ public class Book implements LibraryItem, Serializable {
             return this;
         }
 
-        public Builder type(String value){
+       /* public Builder type(String value){
             this.type = value;
             return this;
-        }
+        }*/
 
-        public Builder publisher(String value){
+        public Builder publisher(Publisher value){
             this.publisher = value;
             return this;
         }
-        public Builder publishDate(int value){
-            this.publishDate = value;
+
+        public Builder authors(List<Author> value){
+            this.authors = value;
+            return this;
+        }
+
+        public Builder copies(List<Copy> value){
+            this.copies = value;
+            return this;
+        }
+
+        public Builder copy(Book value){
+            this.ID = value.ID;
+            this.tittle = value.tittle;
+            this.subject = value.subject;
+            //this.type = value.type;
+            this.ISBN = value.ISBN;
+            this.publisher = value.publisher;
+            this.authors = value.authors;
+            this.copies = value.copies;
             return this;
         }
 

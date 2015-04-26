@@ -1,16 +1,22 @@
 package za.ac.cput.LibrarySystem.domain.Impl;
 
-import za.ac.cput.LibrarySystem.domain.Person;
-
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by student on 2015/04/17.
  */
-public class Author implements Person, Serializable {
-    Long ID;
-    String lName;
-    String fName;
+@Entity
+public class Author implements  Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long ID;
+    private String lName;
+    private String fName;
+    @ManyToMany
+    private List<Book> books = new ArrayList<Book>();
 
 
     private Author(){
@@ -18,36 +24,26 @@ public class Author implements Person, Serializable {
     }
 
     public Author(Builder builder){
-        ID = builder.ID;
         lName = builder.lName;
         fName = builder.fName;
     }
 
-    @Override
-    public Long getID() {
-        return ID;
-    }
-
-    @Override
     public String getLName() {
         return lName;
     }
 
-    @Override
     public String getFName() {
         return fName;
     }
 
     public static class Builder{
-        Long ID;
-        String lName;
-        String fName;
 
-        public Builder ID(Long value){
-            this.ID = value;
-            return this;
-        }
-
+        private String lName;
+        private String fName;
+        /*public Builder(String lName, String fName){
+            this.lName = lName;
+            this.fName = fName;
+        }*/
         public Builder lName(String value){
             this.lName = value;
             return this;
@@ -55,6 +51,12 @@ public class Author implements Person, Serializable {
 
         public Builder fName(String value){
             this.fName = value;
+            return this;
+        }
+
+        public Builder copy(Author value){
+            this.fName = value.fName;
+            this.lName = value.lName;
             return this;
         }
 

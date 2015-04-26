@@ -7,5 +7,5 @@ public interface LibraryItem {
     Long getID();
     String getTittle();
     String getSubject();
-    String getType();
+   // String getType();
 }

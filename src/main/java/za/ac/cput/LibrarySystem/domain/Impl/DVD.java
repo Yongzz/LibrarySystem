@@ -8,13 +8,13 @@ import java.io.Serializable;
  * Created by student on 2015/04/17.
  */
 public class DVD implements LibraryItem, Serializable {
-    Long ID;
-    String tittle;
-    String subject;
-    String type;
-    String code;
-    int duration;
-    String distributor;
+    private Long ID;
+    private String tittle;
+    private String subject;
+   // private String type;
+    private String code;
+    private int duration;
+    private String distributor;
 
     private DVD(){}
 
@@ -22,7 +22,7 @@ public class DVD implements LibraryItem, Serializable {
         ID = builder.ID;
         tittle= builder.tittle;
         subject = builder.subject;
-        type = builder.type;
+     //   type = builder.type;
         code = builder.code;
         duration = builder.duration;
         distributor = builder.distributor;
@@ -53,10 +53,10 @@ public class DVD implements LibraryItem, Serializable {
             return this;
         }
 
-        public Builder type(String value){
+       /* public Builder type(String value){
             this.type = value;
             return this;
-        }
+        }*/
 
         public Builder duration(int value){
             this.duration = value;
@@ -65,6 +65,15 @@ public class DVD implements LibraryItem, Serializable {
 
         public Builder distributor(String value){
             this.distributor = value;
+            return this;
+        }
+
+        public Builder copy(DVD dvd){
+            this.code = dvd.code;
+            this.duration = dvd.duration;
+            this.tittle = dvd.getTittle();
+            this.subject = dvd.subject;
+            this.distributor = dvd.distributor;
             return this;
         }
 
@@ -83,24 +92,18 @@ public class DVD implements LibraryItem, Serializable {
         return distributor;
     }
 
-    @Override
     public String getTittle() {
         return tittle;
     }
-
-    @Override
     public Long getID() {
         return ID;
     }
-
-    @Override
     public String getSubject() {
         return subject;
     }
-    @Override
-    public String getType() {
+    /*public String getType() {
         return type;
-    }
+    }*/
 
     @Override
     public boolean equals(Object o) {

@@ -1,17 +1,23 @@
 package za.ac.cput.LibrarySystem.domain.Impl;
 
-import za.ac.cput.LibrarySystem.domain.Person;
-
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
- * Created by student on 2015/04/17.
+ * Createisgetd by student on 2015/04/17.
  */
-public class Librarian implements Person, Serializable {
-    Long ID;
-    String lName;
-    String fName;
-    String librarianID;
+public class Librarian implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long ID;
+    private String lName;
+    private String fName;
+    @Column(unique = true)
+    private String librarianID;
 
     private Librarian(){
 
@@ -22,17 +28,14 @@ public class Librarian implements Person, Serializable {
         lName = builder.lName;
         fName = builder.fName;
     }
-    @Override
     public Long getID() {
         return ID;
     }
 
-    @Override
     public String getLName() {
         return lName;
     }
 
-    @Override
     public String getFName() {
         return fName;
     }
@@ -51,12 +54,10 @@ public class Librarian implements Person, Serializable {
         public Builder (String librarianID){
             this.librarianID = librarianID;
         }
-
         public Builder ID(Long value){
             this.ID = value;
             return this;
         }
-
 
         public Builder lName(String value){
             this.lName = value;
@@ -68,6 +69,12 @@ public class Librarian implements Person, Serializable {
             return this;
         }
 
+        public Builder copy(Librarian librarian){
+            this.librarianID = librarian.librarianID;
+            this.fName = librarian.fName;
+            this.lName = librarian.lName;
+            return this;
+        }
         public Librarian build(){
             return new Librarian(this);
         }
