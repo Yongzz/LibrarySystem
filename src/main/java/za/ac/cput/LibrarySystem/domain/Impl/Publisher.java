@@ -8,6 +8,7 @@ import java.util.List;
 /**
  * Created by student on 2015/04/17.
  */
+@Entity
 public class Publisher implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

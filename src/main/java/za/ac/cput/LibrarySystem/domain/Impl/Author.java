@@ -8,16 +8,13 @@ import java.util.List;
 /**
  * Created by student on 2015/04/17.
  */
-@Entity
+@Embeddable
 public class Author implements  Serializable {
-    @Id
+    /*@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long ID;
+    private Long ID;*/
     private String lName;
     private String fName;
-    @ManyToMany
-    private List<Book> books = new ArrayList<Book>();
-
 
     private Author(){
 
@@ -66,7 +63,7 @@ public class Author implements  Serializable {
 
     }
 
-    @Override
+  /*  @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -90,5 +87,5 @@ public class Author implements  Serializable {
                 ", lName='" + lName + '\'' +
                 ", fName='" + fName + '\'' +
                 '}';
-    }
+    }*/
 }

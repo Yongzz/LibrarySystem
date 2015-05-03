@@ -1,6 +1,5 @@
 package za.ac.cput.LibrarySystem.domain.Impl;
 
-import za.ac.cput.LibrarySystem.domain.LibraryItem;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -11,19 +10,21 @@ import java.util.List;
  * Created by student on 2015/04/17.
  */
 @Entity
-public class Book implements LibraryItem, Serializable {
+public class Book implements  Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long ID;
     private String tittle;
     private String subject;
-    //private String type;
     @Column(unique = true)
     private String ISBN;
-    @ManyToMany
-    @JoinColumn(name = "book_id")
-    private List<Author> authors = new ArrayList<Author>();
+    @Embedded
+    private Author author;
     private Publisher publisher;
+   // @OneToMany(cascade = CascadeType.ALL)
+   // @JoinColumn(name = "book_id")
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name="book_isbn")
     private List<Copy> copies = new ArrayList<Copy>();
 
     private Book(){}
@@ -31,11 +32,10 @@ public class Book implements LibraryItem, Serializable {
         ID = builder.ID;
         tittle = builder.tittle;
         subject = builder.subject;
-        //type = builder.type;
         ISBN = builder.ISBN;
         publisher = builder.publisher;
-        authors = builder.authors;
-        copies = builder.copies;
+        author = builder.author;
+        //copies = builder.copies;
 
     }
 
@@ -43,21 +43,14 @@ public class Book implements LibraryItem, Serializable {
         return ISBN;
     }
 
-    public Publisher getPublisher() {
-        return publisher;
+    public Publisher getPublisher() {return publisher;}
+
+    public Author getAuthors() {
+        return author;
     }
 
-    public List<Author> getAuthors() {
-        return authors;
-    }
+    public List<Copy> getCopies() {        return copies;    }
 
-    public List<Copy> getCopies() {
-        return copies;
-    }
-
-    /*public String getType() {
-        return type;
-    }*/
 
     public String getSubject() {
         return subject;
@@ -76,10 +69,9 @@ public class Book implements LibraryItem, Serializable {
         private Long ID;
         private String tittle;
         private String subject;
-       // private String type;
         private String ISBN;
         private Publisher publisher;
-        private List<Author> authors = new ArrayList<Author>();
+        private Author author;
         private List<Copy> copies = new ArrayList<Copy>();
 
         public Builder(String ISBN){
@@ -100,18 +92,13 @@ public class Book implements LibraryItem, Serializable {
             return this;
         }
 
-       /* public Builder type(String value){
-            this.type = value;
-            return this;
-        }*/
-
         public Builder publisher(Publisher value){
             this.publisher = value;
             return this;
         }
 
-        public Builder authors(List<Author> value){
-            this.authors = value;
+        public Builder authors(Author value){
+            this.author = value;
             return this;
         }
 
@@ -124,10 +111,9 @@ public class Book implements LibraryItem, Serializable {
             this.ID = value.ID;
             this.tittle = value.tittle;
             this.subject = value.subject;
-            //this.type = value.type;
             this.ISBN = value.ISBN;
             this.publisher = value.publisher;
-            this.authors = value.authors;
+            this.author = value.author;
             this.copies = value.copies;
             return this;
         }

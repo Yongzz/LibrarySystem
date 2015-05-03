@@ -18,7 +18,7 @@ public class BookFactory {
                 .subject(value.get("subject"))
                 //.type(value.get("type"))
                 .publisher(publisher)
-                .authors(list.get("authors"))
+               // .authors(list.get("authors"))
                 .copies(list.get("copies"))
                 .build();
     }

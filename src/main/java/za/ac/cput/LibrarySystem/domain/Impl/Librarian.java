@@ -1,14 +1,12 @@
 package za.ac.cput.LibrarySystem.domain.Impl;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * Createisgetd by student on 2015/04/17.
  */
+@Entity
 public class Librarian implements Serializable {
 
     @Id

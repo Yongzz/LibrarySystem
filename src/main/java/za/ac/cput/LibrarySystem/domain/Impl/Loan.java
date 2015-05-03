@@ -1,6 +1,6 @@
 package za.ac.cput.LibrarySystem.domain.Impl;
 
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,10 @@ import java.util.List;
 /**
  * Created by student on 2015/04/17.
  */
+@Entity
 public class Loan implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long ID;
     private String loanDate;
     private String dueDate;
@@ -54,10 +57,10 @@ public class Loan implements Serializable {
         private Member member;
         private Librarian librarian;
 
-        /*private Builder(Member member, Librarian librarian){
+        public Builder(Member member, Librarian librarian){
             this.librarian = librarian;
             this.member = member;
-        }*/
+        }
 
         public Builder ID(Long value){
             this.ID = value;
@@ -102,9 +105,8 @@ public class Loan implements Serializable {
 
         Loan loan = (Loan) o;
 
-        if (ID != null ? !ID.equals(loan.ID) : loan.ID != null) return false;
+        return !(ID != null ? !ID.equals(loan.ID) : loan.ID != null);
 
-        return true;
     }
 
     @Override

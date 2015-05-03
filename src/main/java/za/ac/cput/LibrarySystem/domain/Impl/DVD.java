@@ -1,17 +1,21 @@
 package za.ac.cput.LibrarySystem.domain.Impl;
 
-import za.ac.cput.LibrarySystem.domain.LibraryItem;
 
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * Created by student on 2015/04/17.
  */
-public class DVD implements LibraryItem, Serializable {
+@Entity
+public class DVD implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long ID;
     private String tittle;
     private String subject;
    // private String type;
+    @Column(unique = true)
     private String code;
     private int duration;
     private String distributor;

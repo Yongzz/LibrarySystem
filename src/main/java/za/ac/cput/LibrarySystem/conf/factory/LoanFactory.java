@@ -11,11 +11,11 @@ import java.util.Map;
  */
 public class LoanFactory {
     public static Loan createLoan(Map<String,String> value,Member member,Librarian librarian){
-        return new Loan.Builder()
+        return new Loan.Builder(member,librarian)
                 .loanDate(value.get("loanDate"))
                 .dueDate(value.get("dueDate"))
-                .member(member)
-                .librarian(librarian)
+                /*.member(member)
+                .librarian(librarian)*/
                 .build();
     }
 }

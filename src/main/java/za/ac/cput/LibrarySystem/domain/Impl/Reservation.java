@@ -1,13 +1,16 @@
 package za.ac.cput.LibrarySystem.domain.Impl;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 /**
  * Created by student on 2015/04/18.
  */
-public class Reservation {
+@Entity
+public class Reservation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
@@ -21,7 +24,6 @@ public class Reservation {
         reservedDate = builder.reservedDate;
         member = builder.member;
         book = builder.book;
-
     }
 
     public Long getId() {
@@ -70,5 +72,21 @@ public class Reservation {
         public Reservation build(){
             return new Reservation(this);
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Reservation that = (Reservation) o;
+
+        return !(id != null ? !id.equals(that.id) : that.id != null);
+
+    }
+
+    @Override
+    public int hashCode() {
+        return id != null ? id.hashCode() : 0;
     }
 }

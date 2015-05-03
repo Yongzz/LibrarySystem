@@ -1,9 +1,13 @@
 package za.ac.cput.LibrarySystem.domain.Impl;
 
+import javax.persistence.Embeddable;
+import java.io.Serializable;
+
 /**
  * Created by Yongama on 2015-04-24.
  */
-public class Address {
+@Embeddable
+public class Address implements Serializable{
     /*@Id
     @GeneratedValue(strategy = GenerationType.AUTO)*/
     private int houseNumber;

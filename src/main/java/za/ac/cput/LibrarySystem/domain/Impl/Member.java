@@ -1,24 +1,31 @@
 package za.ac.cput.LibrarySystem.domain.Impl;
 
+import javax.persistence.*;
+import java.io.Serializable;
+
 /**
  * Created by student on 2015/04/17.
  */
-//@Entity
-public class Member {
-   /*@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)*/
+@Entity
+public class Member implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @Column(unique = true)
     private String member_id;
+
     private String firstName;
     private String lastName;
-    private Address address;
+   /* @Embedded
+    private Address address;*/
 
     private Member(){}
     public Member(Builder builder){
         member_id = builder.member_id;
         firstName = builder.firstName;
         lastName = builder.lastName;
-        address = builder.address;
+        //address = builder.address;
     }
     public Long getId() {
         return id;
@@ -36,11 +43,12 @@ public class Member {
         return lastName;
     }
 
-    public Address getAddress() {
+    /*public Address getAddress() {
         return address;
-    }
+    }*/
 
     public static class Builder{
+        private Long id;
         private String member_id;
         private String firstName;
         private String lastName;
@@ -49,10 +57,16 @@ public class Member {
         public Builder(String value){
             this.member_id = value;
         }
+
         public Builder firstName(String value){
             this.firstName = value;
             return this;
         }
+
+       /* public Builder id(Long value){
+            this.id = value;
+            return this;
+        }*/
 
         public Builder lastName(String value){
             this.lastName = value;
@@ -65,10 +79,11 @@ public class Member {
         }
 
         public Builder copy(Member value){
+            this.id = value.id;
             this.member_id = value.member_id;
             this.firstName = value.firstName;
             this.lastName = value.lastName;
-            this.address = value.address;
+            //this.address = value.address;
             return this;
         }
 
