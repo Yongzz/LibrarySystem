@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by student on 2015/04/18.
@@ -14,7 +15,7 @@ public class Reservation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
-    private String reservedDate;
+    private Date reservedDate;
     private Member member;
     private Book book;
 
@@ -30,7 +31,7 @@ public class Reservation implements Serializable {
         return id;
     }
 
-    public String getReservedDate() {
+    public Date getReservedDate() {
         return reservedDate;
     }
 
@@ -43,11 +44,11 @@ public class Reservation implements Serializable {
     }
 
     public static class Builder{
-        private String reservedDate;
+        private Date reservedDate;
         private Member member;
         private Book book;
 
-        public Builder reservedDate(String value){
+        public Builder reservedDate(Date value){
             this.reservedDate = value;
             return this;
         }
