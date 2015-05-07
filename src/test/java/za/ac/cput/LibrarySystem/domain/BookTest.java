@@ -49,7 +49,7 @@ public class BookTest {
         list.put("authors",authors);
 
         Book book = BookFactory.createBook(values,publisher,list);
-        Book newBook = new Book.Builder(/*book.getISBN()*/"454")
+        Book newBook = new Book.Builder(book.getISBN())
                 .copy(book)
                 .tittle("Java how to program").build();
 

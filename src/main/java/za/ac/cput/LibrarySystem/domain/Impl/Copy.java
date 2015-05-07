@@ -17,7 +17,6 @@ public class Copy implements Serializable {
     private String accessionNumber;
     private String datePurchased;
     private String copy_Notes;
-
     private Copy(){}
 
     public Copy(Builder builder){
@@ -25,6 +24,7 @@ public class Copy implements Serializable {
         datePurchased = builder.datePurchased;
         copy_Notes = builder.copy_Notes;
     }
+
 
     public Long getId() {
         return Id;
@@ -41,6 +41,7 @@ public class Copy implements Serializable {
     public String getCopy_Notes() {
         return copy_Notes;
     }
+
 
     public static class Builder{
         private String accessionNumber;

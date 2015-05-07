@@ -17,15 +17,15 @@ public class Member implements Serializable {
 
     private String firstName;
     private String lastName;
-   /* @Embedded
-    private Address address;*/
+    @Embedded
+    private Address address;
 
     private Member(){}
     public Member(Builder builder){
         member_id = builder.member_id;
         firstName = builder.firstName;
         lastName = builder.lastName;
-        //address = builder.address;
+        address = builder.address;
     }
     public Long getId() {
         return id;
@@ -43,9 +43,9 @@ public class Member implements Serializable {
         return lastName;
     }
 
-    /*public Address getAddress() {
+    public Address getAddress() {
         return address;
-    }*/
+    }
 
     public static class Builder{
         private Long id;
@@ -63,10 +63,10 @@ public class Member implements Serializable {
             return this;
         }
 
-       /* public Builder id(Long value){
+        public Builder id(Long value){
             this.id = value;
             return this;
-        }*/
+        }
 
         public Builder lastName(String value){
             this.lastName = value;
@@ -83,7 +83,7 @@ public class Member implements Serializable {
             this.member_id = value.member_id;
             this.firstName = value.firstName;
             this.lastName = value.lastName;
-            //this.address = value.address;
+            this.address = value.address;
             return this;
         }
 

@@ -15,10 +15,15 @@ public class Loan implements Serializable {
     private Long ID;
     private String loanDate;
     private String dueDate;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "Loan_id1")
     private Member member;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "Loan_id2")
     private Librarian librarian;
-    @ManyToMany
-    List<Book> books = new ArrayList<Book>();
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "Loan_id")
+    private List<Copy> copies;
 
     private Loan(){}
     public Loan(Builder builder){
@@ -27,7 +32,10 @@ public class Loan implements Serializable {
         loanDate = builder.loanDate;
         member = builder.member;
         librarian= builder.librarian;
+        copies = builder.copies;
         dueDate = builder.dueDate;
+
+
     }
     public Long getID() {
         return ID;
@@ -56,6 +64,7 @@ public class Loan implements Serializable {
         private String dueDate;
         private Member member;
         private Librarian librarian;
+        private List<Copy> copies;
 
         public Builder(Member member, Librarian librarian){
             this.librarian = librarian;
@@ -81,11 +90,17 @@ public class Loan implements Serializable {
             return this;
         }
 
+        public Builder copies(List<Copy>  value){
+            this.copies = value;
+            return this;
+        }
+
         public Builder librarian(Librarian value){
             this.librarian = value;
             return this;
         }
         public Builder copy(Loan loan){
+            this.copies = loan.copies;
             this.loanDate = loan.loanDate;
             this.member = loan.member;
             this.librarian = loan.librarian;

@@ -4,7 +4,7 @@ import org.springframework.data.repository.CrudRepository;
 import za.ac.cput.LibrarySystem.domain.Impl.Copy;
 
 /**
- * Created by Yongama on 2015-05-03.
+ * Created by Yongama on 2015-05-06.
  */
 public interface CopyRepository extends CrudRepository<Copy,Long> {
 }

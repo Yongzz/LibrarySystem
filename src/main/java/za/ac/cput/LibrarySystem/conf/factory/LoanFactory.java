@@ -14,8 +14,8 @@ public class LoanFactory {
         return new Loan.Builder(member,librarian)
                 .loanDate(value.get("loanDate"))
                 .dueDate(value.get("dueDate"))
-                /*.member(member)
-                .librarian(librarian)*/
+                .member(member)
+                .librarian(librarian)
                 .build();
     }
 }

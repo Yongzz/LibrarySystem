@@ -26,8 +26,7 @@ public class TestCrudReservation extends AbstractTestNGSpringContextTests{
     ReservationRepository repository;
     @Test
     public void testCreate() throws Exception {
-        DateFormat format = new SimpleDateFormat("yyyy/MM/dd");
-        Date date = new Date();
+        Date date = new SimpleDateFormat("yyyy/MM/dd").parse("2015/05/03");
         Reservation reservation =  new Reservation.Builder().reservedDate(date).build();
         repository.save(reservation);
         id = reservation.getId();
@@ -44,11 +43,11 @@ public class TestCrudReservation extends AbstractTestNGSpringContextTests{
     @Test(dependsOnMethods = "testRead")
     public void testUpdate() throws Exception {
         Reservation res = repository.findOne(id);
-        Date date = new SimpleDateFormat("yyyy-MM-dd").parse("2013-04-26");
+        Date date = new SimpleDateFormat("yyyy/MM/dd").parse("2013/04/26");
         Reservation reservation =  new Reservation.Builder().copy(res)
                 .reservedDate(date)
                 .build();
-        Assert.assertEquals("2013-04-26", new SimpleDateFormat("yyyy-MM-dd").format(reservation.getReservedDate()) );
+        Assert.assertEquals("2013/04/26", new SimpleDateFormat("yyyy/MM/dd").format(reservation.getReservedDate()) );
     }
 
     @Test(dependsOnMethods = "testUpdate")

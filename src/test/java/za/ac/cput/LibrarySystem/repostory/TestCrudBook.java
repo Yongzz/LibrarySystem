@@ -7,24 +7,48 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.testng.annotations.Test;
 import za.ac.cput.LibrarySystem.App;
+import za.ac.cput.LibrarySystem.conf.factory.CopyFactory;
+import za.ac.cput.LibrarySystem.domain.Impl.Author;
 import za.ac.cput.LibrarySystem.domain.Impl.Book;
+import za.ac.cput.LibrarySystem.domain.Impl.Copy;
+import za.ac.cput.LibrarySystem.domain.Impl.Publisher;
 import za.ac.cput.LibrarySystem.repository.BookRepository;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Yongama on 2015/05/03.
  */
 @SpringApplicationConfiguration(classes= App.class)
 @WebAppConfiguration
+@Test(suiteName = "TestAll")
 public class TestCrudBook extends AbstractTestNGSpringContextTests {
 
     private Long idd;
     @Autowired
     BookRepository rep;
+
     @Test
     public void testCreate() throws Exception {
-       Book item = new Book.Builder("978-1-4080-4863-4")
+        Copy cop1 = CopyFactory.createCopy("1001", "22-May-2015", "slightly damaged");
+        Copy cop2 = CopyFactory.createCopy("1002", "22-May-2015", "slightly damaged");
+        List<Copy> copyList = new ArrayList<Copy>();
+        copyList.add(cop1);
+        copyList.add(cop2);
+
+        Book item = new Book.Builder("978-1-4080-4863-4")
                 .tittle("Database Principles : Fundamentals of Design, implementations, and Management")
                 .subject("Database")
+               .authors(new Author.Builder()
+                       .fName("Coronel")
+                       .lName("Carlos")
+                       .build())
+                .publisher(new Publisher.Builder()
+                        .publisherName("Cengage Learning")
+                        .placeOfPublication("2006")
+                        .build())
+                .copies(copyList)
                 .build();
         rep.save(item);
         idd = item.getID();
@@ -52,7 +76,7 @@ public class TestCrudBook extends AbstractTestNGSpringContextTests {
     @Test(dependsOnMethods = "testUpdate")
     public void testDelete() throws Exception {
         Book book = rep.findOne(idd);
-        rep.delete(idd);
+        rep.delete(book);
         Book b = rep.findOne(idd);
         Assert.assertNull(b);
     }

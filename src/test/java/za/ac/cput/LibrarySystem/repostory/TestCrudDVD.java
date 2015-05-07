@@ -25,8 +25,8 @@ public class TestCrudDVD extends AbstractTestNGSpringContextTests{
         DVD dvd = new DVD.Builder("111")
                 .duration(20)
                 .tittle("Early Childhood Education and Psychology")
-                .distributor("Psychology")
-                .subject("UCT")
+                .distributor("UCT")
+                .subject("Psychology")
                 .build();
         dvdRepository.save(dvd);
         id = dvd.getID();
@@ -56,4 +56,5 @@ public class TestCrudDVD extends AbstractTestNGSpringContextTests{
         DVD d = dvdRepository.findOne(id);
         Assert.assertNull(d);
     }
+
 }

@@ -1,6 +1,8 @@
 package za.ac.cput.LibrarySystem.domain.Impl;
 
 
+import za.ac.cput.LibrarySystem.domain.LibraryItem;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -10,59 +12,48 @@ import java.util.List;
  * Created by student on 2015/04/17.
  */
 @Entity
-public class Book implements  Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long ID;
-    private String tittle;
-    private String subject;
+public class Book extends LibraryItem {
+
     @Column(unique = true)
     private String ISBN;
     @Embedded
     private Author author;
+    @Embedded
     private Publisher publisher;
-   // @OneToMany(cascade = CascadeType.ALL)
-   // @JoinColumn(name = "book_id")
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name="book_isbn")
-    private List<Copy> copies = new ArrayList<Copy>();
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @JoinColumn(name = "book_id")
+    private List<Copy> copies;
 
     private Book(){}
     public Book(Builder builder){
         ID = builder.ID;
         tittle = builder.tittle;
+        copies = builder.copies;
         subject = builder.subject;
         ISBN = builder.ISBN;
-        publisher = builder.publisher;
         author = builder.author;
-        //copies = builder.copies;
-
+        publisher =builder.publisher;
     }
 
     public String getISBN() {
         return ISBN;
     }
 
-    public Publisher getPublisher() {return publisher;}
 
     public Author getAuthors() {
         return author;
     }
 
-    public List<Copy> getCopies() {        return copies;    }
-
-
-    public String getSubject() {
-        return subject;
+    public List<Copy> getCopies() {
+        return copies;
     }
 
-    public String getTittle() {
-        return tittle;
+    public Publisher getPublisher() {
+        return publisher;
     }
 
-
-    public Long getID() {
-        return ID;
+    public Author getAuthor() {
+        return author;
     }
 
     public static class Builder{
@@ -70,9 +61,10 @@ public class Book implements  Serializable {
         private String tittle;
         private String subject;
         private String ISBN;
-        private Publisher publisher;
         private Author author;
-        private List<Copy> copies = new ArrayList<Copy>();
+        private List<Copy> copies;
+        private Publisher publisher;
+
 
         public Builder(String ISBN){
             this.ISBN = ISBN;
@@ -112,8 +104,8 @@ public class Book implements  Serializable {
             this.tittle = value.tittle;
             this.subject = value.subject;
             this.ISBN = value.ISBN;
-            this.publisher = value.publisher;
             this.author = value.author;
+            this.publisher = value.publisher;
             this.copies = value.copies;
             return this;
         }

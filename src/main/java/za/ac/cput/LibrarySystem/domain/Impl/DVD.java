@@ -1,6 +1,8 @@
 package za.ac.cput.LibrarySystem.domain.Impl;
 
 
+import za.ac.cput.LibrarySystem.domain.LibraryItem;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -8,13 +10,8 @@ import java.io.Serializable;
  * Created by student on 2015/04/17.
  */
 @Entity
-public class DVD implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long ID;
-    private String tittle;
-    private String subject;
-   // private String type;
+public class DVD extends LibraryItem {
+
     @Column(unique = true)
     private String code;
     private int duration;
@@ -26,7 +23,7 @@ public class DVD implements Serializable {
         ID = builder.ID;
         tittle= builder.tittle;
         subject = builder.subject;
-     //   type = builder.type;
+        itemType = builder.type;
         code = builder.code;
         duration = builder.duration;
         distributor = builder.distributor;
@@ -57,10 +54,10 @@ public class DVD implements Serializable {
             return this;
         }
 
-       /* public Builder type(String value){
+        public Builder type(String value){
             this.type = value;
             return this;
-        }*/
+        }
 
         public Builder duration(int value){
             this.duration = value;
@@ -95,19 +92,6 @@ public class DVD implements Serializable {
     public String getDistributor() {
         return distributor;
     }
-
-    public String getTittle() {
-        return tittle;
-    }
-    public Long getID() {
-        return ID;
-    }
-    public String getSubject() {
-        return subject;
-    }
-    /*public String getType() {
-        return type;
-    }*/
 
     @Override
     public boolean equals(Object o) {
