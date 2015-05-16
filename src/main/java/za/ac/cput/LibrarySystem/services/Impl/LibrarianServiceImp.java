@@ -11,6 +11,8 @@ import java.util.List;
 /**
  * Created by Yongama on 2015-05-10.
  */
+
+/*
 public class LibrarianServiceImp implements LibrarianService{
     @Autowired
     LibrarianRepository repository;
@@ -22,4 +24,4 @@ public class LibrarianServiceImp implements LibrarianService{
         }
         return librarianList;
     }
-}
+}*/

@@ -9,4 +9,6 @@ import java.util.List;
  */
 public interface LibrarianService {
     List<Librarian> getLibrarian();
+    void issueLoan();
+
 }
