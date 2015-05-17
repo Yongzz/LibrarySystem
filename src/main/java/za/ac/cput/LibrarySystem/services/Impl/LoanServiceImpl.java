@@ -1,25 +1,38 @@
 package za.ac.cput.LibrarySystem.services.Impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import za.ac.cput.LibrarySystem.domain.Impl.Librarian;
 import za.ac.cput.LibrarySystem.domain.Impl.Loan;
+import za.ac.cput.LibrarySystem.domain.Impl.Member;
 import za.ac.cput.LibrarySystem.repository.LoanRepository;
-import za.ac.cput.LibrarySystem.services.LoanService;
+import za.ac.cput.LibrarySystem.services.LoanServices;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Yongama on 2015-05-10.
+ * Created by Yongama on 2015-05-16.
  */
-public class LoanServiceImpl implements LoanService {
+@Service
+public class LoanServiceImpl implements LoanServices {
+
     @Autowired
-    LoanRepository repository;
+    LoanRepository loanRepo;
     public List<Loan> getLoans() {
         List<Loan> loanList = new ArrayList<Loan>();
-        Iterable<Loan> loans = repository.findAll();
+        Iterable<Loan> loans = loanRepo.findAll();
         for (Loan l : loans) {
             loanList.add(l);
         }
         return loanList;
+    }
+
+    public Librarian getLibrarian(Long ID) {
+        return loanRepo.findOne(ID).getLibrarian();
+    }
+
+    public Member getMember(Long ID) {
+        return loanRepo.findOne(ID).getMember();
     }
 }

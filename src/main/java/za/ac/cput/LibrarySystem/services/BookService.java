@@ -1,6 +1,7 @@
 package za.ac.cput.LibrarySystem.services;
 
 import za.ac.cput.LibrarySystem.domain.Impl.Book;
+import za.ac.cput.LibrarySystem.domain.Impl.Copy;
 
 import java.util.List;
 
@@ -9,4 +10,5 @@ import java.util.List;
  */
 public interface BookService {
     List<Book> getBooks();
+    List<Copy> getCopies(Long ID);
 }
