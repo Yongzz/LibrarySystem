@@ -22,7 +22,6 @@ import java.util.List;
  */
 @SpringApplicationConfiguration(classes= App.class)
 @WebAppConfiguration
-@Test(suiteName = "TestAll")
 public class TestCrudBook extends AbstractTestNGSpringContextTests {
 
     private Long idd;
@@ -32,7 +31,7 @@ public class TestCrudBook extends AbstractTestNGSpringContextTests {
     @Test
     public void testCreate() throws Exception {
         Copy cop1 = CopyFactory.createCopy("1001", "22-May-2015", "slightly damaged");
-        Copy cop2 = CopyFactory.createCopy("1002", "22-May-2015", "slightly damaged");
+        Copy cop2 = CopyFactory.createCopy("1002", "20-June-2015", "Newer cover");
         List<Copy> copyList = new ArrayList<Copy>();
         copyList.add(cop1);
         copyList.add(cop2);

@@ -2,6 +2,7 @@ package za.ac.cput.LibrarySystem.domain.Impl;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by student on 2015/04/17.
@@ -22,11 +23,14 @@ public class Member implements Serializable {
 
     private Member(){}
     public Member(Builder builder){
+        this.id = builder.id;
         member_id = builder.member_id;
         firstName = builder.firstName;
         lastName = builder.lastName;
         address = builder.address;
     }
+
+
     public Long getId() {
         return id;
     }
@@ -46,6 +50,7 @@ public class Member implements Serializable {
     public Address getAddress() {
         return address;
     }
+
 
     public static class Builder{
         private Long id;
@@ -79,11 +84,11 @@ public class Member implements Serializable {
         }
 
         public Builder copy(Member value){
-            this.id = value.id;
             this.member_id = value.member_id;
             this.firstName = value.firstName;
             this.lastName = value.lastName;
             this.address = value.address;
+            this.id = value.id;
             return this;
         }
 

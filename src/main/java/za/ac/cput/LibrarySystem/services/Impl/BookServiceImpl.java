@@ -18,6 +18,7 @@ public class BookServiceImpl implements BookService{
 
     @Autowired
     BookRepository bookRepository;
+
     public List<Book> getBooks() {
         List<Book> bookList = new ArrayList<Book>();
         Iterable<Book> books = bookRepository.findAll();

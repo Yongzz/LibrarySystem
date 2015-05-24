@@ -16,7 +16,6 @@ public abstract class LibraryItem implements Serializable {
     protected Long ID;
     protected String tittle;
     protected String subject;
-    protected String itemType;
 
 
     public String getTittle() {
@@ -25,10 +24,6 @@ public abstract class LibraryItem implements Serializable {
 
     public String getSubject() {
         return subject;
-    }
-
-    public String getItemType() {
-        return itemType;
     }
 
     public Long getID() {
@@ -56,7 +51,6 @@ public abstract class LibraryItem implements Serializable {
         return "LibraryItem{" +
                 "ID=" + ID +
                 ", tittle='" + tittle + '\'' +
-                ", itemType='" + itemType + '\'' +
                 '}';
     }
 }

@@ -23,7 +23,6 @@ public class DVD extends LibraryItem {
         ID = builder.ID;
         tittle= builder.tittle;
         subject = builder.subject;
-        itemType = builder.type;
         code = builder.code;
         duration = builder.duration;
         distributor = builder.distributor;

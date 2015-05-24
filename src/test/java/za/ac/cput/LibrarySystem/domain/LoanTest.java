@@ -25,7 +25,7 @@ public class LoanTest extends TestCase{
                 .firstName("Yongama")
                 .build();
         Librarian librarian = new Librarian.Builder("LB111").fName("Thules").build();
-        Loan loan = LoanFactory.createLoan(value,member,librarian);
+        Loan loan = LoanFactory.createLoan(value,member,librarian,null);
 
         assertEquals("25-April-2015",loan.getDueDate());
        // assertEquals("LB111",loan.getLibrarian().getLibrarianID());
@@ -43,7 +43,7 @@ public class LoanTest extends TestCase{
                 .firstName("Yongama")
                 .build();
         Librarian librarian = new Librarian.Builder("LB111").fName("Thules").build();
-        Loan loan = LoanFactory.createLoan(value, member, librarian);
+        Loan loan = LoanFactory.createLoan(value, member, librarian,null);
         Loan newLoan = new Loan.Builder(member,librarian)
                 .copy(loan)
                 .dueDate("29-April-2015").build();

@@ -2,6 +2,7 @@ package za.ac.cput.LibrarySystem.domain.Impl;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Createisgetd by student on 2015/04/17.
@@ -16,7 +17,6 @@ public class Librarian implements Serializable {
     private String fName;
     @Column(unique = true)
     private String librarianID;
-
     private Librarian(){
 
     }
@@ -43,10 +43,11 @@ public class Librarian implements Serializable {
     }
 
     public static class Builder{
-        Long ID;
-        String librarianID;
-        String lName;
-        String fName;
+        private Long ID;
+        private String librarianID;
+        private String lName;
+        private String fName;
+        private List<Loan> loans;
 
 
         public Builder (String librarianID){
@@ -66,6 +67,10 @@ public class Librarian implements Serializable {
             this.fName = value;
             return this;
         }
+        public Builder loans(List<Loan> value){
+            this.loans = value;
+            return this;
+        }
 
         public Builder copy(Librarian librarian){
             this.librarianID = librarian.librarianID;
@@ -78,7 +83,6 @@ public class Librarian implements Serializable {
         }
 
     }
-
 
     @Override
     public boolean equals(Object o) {

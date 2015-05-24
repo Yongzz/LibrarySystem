@@ -9,7 +9,7 @@
 			<class name="za.ac.cput.LibrarySystem.repostory.TestCrudDVD" />
 			<class name="za.ac.cput.LibrarySystem.repostory.TestCrudLoan" />
 			<class name="za.ac.cput.LibrarySystem.repostory.TestCrudReservation" />
-			<class name="za.ac.cput.LibrarySystem.DomainTestSuite" />
+			<class name="za.ac.cput.LibrarySystem.repostory.TestCrudMember" />
 		</classes>
 	</test>
  

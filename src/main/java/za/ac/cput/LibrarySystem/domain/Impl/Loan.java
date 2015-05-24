@@ -15,15 +15,15 @@ public class Loan implements Serializable {
     private Long ID;
     private String loanDate;
     private String dueDate;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "Loan_id1")
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "Member_ID")
     private Member member;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "Loan_id2")
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "Librarian_ID")
     private Librarian librarian;
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "Loan_id")
-    private List<Copy> copies;
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "access_No")
+    private Copy copy;
 
     private Loan(){}
     public Loan(Builder builder){
@@ -32,7 +32,7 @@ public class Loan implements Serializable {
         loanDate = builder.loanDate;
         member = builder.member;
         librarian= builder.librarian;
-        copies = builder.copies;
+        copy = builder.copy;
         dueDate = builder.dueDate;
 
 
@@ -57,6 +57,10 @@ public class Loan implements Serializable {
         return member;
     }
 
+    public Copy getCopy() {
+        return copy;
+    }
+
     public static class Builder{
 
         Long ID;
@@ -64,7 +68,7 @@ public class Loan implements Serializable {
         private String dueDate;
         private Member member;
         private Librarian librarian;
-        private List<Copy> copies;
+        private Copy copy;
 
         public Builder(Member member, Librarian librarian){
             this.librarian = librarian;
@@ -90,8 +94,8 @@ public class Loan implements Serializable {
             return this;
         }
 
-        public Builder copies(List<Copy>  value){
-            this.copies = value;
+        public Builder copy(Copy  value){
+            this.copy = value;
             return this;
         }
 
@@ -100,7 +104,7 @@ public class Loan implements Serializable {
             return this;
         }
         public Builder copy(Loan loan){
-            this.copies = loan.copies;
+            this.copy = loan.copy;
             this.loanDate = loan.loanDate;
             this.member = loan.member;
             this.librarian = loan.librarian;

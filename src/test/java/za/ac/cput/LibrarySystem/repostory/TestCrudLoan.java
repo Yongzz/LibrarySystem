@@ -7,11 +7,11 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.testng.annotations.Test;
 import za.ac.cput.LibrarySystem.App;
+import za.ac.cput.LibrarySystem.conf.factory.CopyFactory;
 import za.ac.cput.LibrarySystem.conf.factory.LoanFactory;
-import za.ac.cput.LibrarySystem.domain.Impl.Address;
-import za.ac.cput.LibrarySystem.domain.Impl.Librarian;
-import za.ac.cput.LibrarySystem.domain.Impl.Loan;
-import za.ac.cput.LibrarySystem.domain.Impl.Member;
+import za.ac.cput.LibrarySystem.domain.Impl.*;
+import za.ac.cput.LibrarySystem.repository.BookRepository;
+import za.ac.cput.LibrarySystem.repository.CopyRepository;
 import za.ac.cput.LibrarySystem.repository.LoanRepository;
 
 import java.util.HashMap;
@@ -25,7 +25,11 @@ import java.util.Map;
 public class TestCrudLoan extends AbstractTestNGSpringContextTests{
     private Long id;
     @Autowired
-    LoanRepository repository;
+    private LoanRepository repository;
+    @Autowired
+    private BookRepository bookRepository;
+    @Autowired
+    private CopyRepository copyRepository;
 
     @Test
     public void testCreate() throws Exception {
@@ -41,7 +45,9 @@ public class TestCrudLoan extends AbstractTestNGSpringContextTests{
                 .lastName("Ngwenduna")
                 .build();
         Librarian librarian = new Librarian.Builder("LB111").fName("Thules").build();
-        Loan loan = LoanFactory.createLoan(value, member, librarian);
+        Copy copy = CopyFactory.createCopy("11111-2222", "22-May-2015", "slightly damaged");
+
+        Loan loan = LoanFactory.createLoan(value, member, librarian,copy);
 
         repository.save(loan);
         id = loan.getID();

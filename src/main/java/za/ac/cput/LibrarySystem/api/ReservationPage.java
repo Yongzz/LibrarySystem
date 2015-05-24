@@ -1,4 +1,4 @@
-package za.ac.cput.LibrarySystem.api;
+/*package za.ac.cput.LibrarySystem.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +15,7 @@ import java.util.List;
 /**
  * Created by Yongama on 2015-05-17.
  */
+/*
 @RestController
 @RequestMapping(value = "/Reservation/**")
 public class ReservationPage {
@@ -29,4 +30,4 @@ public class ReservationPage {
         return service.getMember(ID);
     }
 
-}
+}*/

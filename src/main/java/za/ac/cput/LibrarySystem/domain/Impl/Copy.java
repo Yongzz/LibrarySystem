@@ -1,10 +1,8 @@
 package za.ac.cput.LibrarySystem.domain.Impl;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by Yongama on 2015-04-25.
@@ -51,12 +49,12 @@ public class Copy implements Serializable {
         public Builder(String accessionNumber){
             this.accessionNumber = accessionNumber;
         }
-
+/*
         public Builder accessionNumber(String value){
             this.accessionNumber = value;
             return this;
         }
-
+*/
         public Builder datePurchased(String value){
             this.datePurchased = value;
             return this;

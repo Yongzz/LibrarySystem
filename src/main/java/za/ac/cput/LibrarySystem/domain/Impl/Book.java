@@ -26,7 +26,7 @@ public class Book extends LibraryItem {
 
     private Book(){}
     public Book(Builder builder){
-        ID = builder.ID;
+        this.ID = builder.ID;
         tittle = builder.tittle;
         copies = builder.copies;
         subject = builder.subject;
@@ -35,10 +35,12 @@ public class Book extends LibraryItem {
         publisher =builder.publisher;
     }
 
+    public Long getID(){
+        return ID;
+    }
     public String getISBN() {
         return ISBN;
     }
-
 
     public Author getAuthors() {
         return author;

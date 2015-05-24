@@ -2,11 +2,12 @@ package za.ac.cput.LibrarySystem.services.Impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import za.ac.cput.LibrarySystem.domain.Impl.Copy;
 import za.ac.cput.LibrarySystem.domain.Impl.Librarian;
 import za.ac.cput.LibrarySystem.domain.Impl.Loan;
 import za.ac.cput.LibrarySystem.domain.Impl.Member;
 import za.ac.cput.LibrarySystem.repository.LoanRepository;
-import za.ac.cput.LibrarySystem.services.LoanServices;
+import za.ac.cput.LibrarySystem.services.LoanService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.List;
  * Created by Yongama on 2015-05-16.
  */
 @Service
-public class LoanServiceImpl implements LoanServices {
+public class LoanServiceImpl implements LoanService {
 
     @Autowired
     LoanRepository loanRepo;
@@ -35,4 +36,9 @@ public class LoanServiceImpl implements LoanServices {
     public Member getMember(Long ID) {
         return loanRepo.findOne(ID).getMember();
     }
+    public Copy getCopy(Long ID) {
+        return loanRepo.findOne(ID).getCopy();
+    }
+
+
 }
