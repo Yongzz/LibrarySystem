@@ -1,16 +1,17 @@
 package za.ac.cput.LibrarySystem.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.Link;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import za.ac.cput.LibrarySystem.domain.Impl.Copy;
-import za.ac.cput.LibrarySystem.domain.Impl.Librarian;
-import za.ac.cput.LibrarySystem.domain.Impl.Loan;
-import za.ac.cput.LibrarySystem.domain.Impl.Member;
+import za.ac.cput.LibrarySystem.domain.Impl.*;
+import za.ac.cput.LibrarySystem.model.BookResource;
+import za.ac.cput.LibrarySystem.model.LoanResource;
 import za.ac.cput.LibrarySystem.services.LoanService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -40,5 +41,34 @@ public class LoanPage {
     public Copy getCopy(@PathVariable Long ID) {
         return services.getCopy(ID);
     }
+    @RequestMapping(value = "/all_loans",method = RequestMethod.GET)
+    public List<LoanResource> getBooks(){
+        List<Loan> loans = services.getLoans();
+        List<LoanResource> resources = new ArrayList<>(loans.size());
+
+        for (Loan loan : loans) {
+            LoanResource resource = new LoanResource.Builder(loan.getMember(),loan.getLibrarian())
+                    .copy(loan.getCopy())
+                    .dueDate(loan.getDueDate())
+                    .loanDate(loan.getLoanDate())
+                    .resID(loan.getID())
+                    .build();
+            Link link = new
+                    Link("http://localhost:8080/loan/"+resource.getresID()+"/librarian")
+                    .withRel("booker");
+            Link link1 = new
+                    Link("http://localhost:8080/loan/"+resource.getresID()+"/member")
+                    .withRel("booker");
+            Link link2 = new
+                    Link("http://localhost:8080/loan/"+resource.getresID()+"/copy")
+                    .withRel("booker");
+            resource.add(link);
+            resource.add(link1);
+            resource.add(link2);
+            resources.add(resource);
+        }
+        return resources;
+    }
+
 
 }
