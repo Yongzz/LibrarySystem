@@ -2,105 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9791d2b3-078c-47de-a719-3fa3bde42ab5" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__com_fasterxml_jackson_core_jackson_annotations_2_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__com_fasterxml_jackson_core_jackson_core_2_4_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__com_fasterxml_jackson_core_jackson_databind_2_4_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_core_8_0_20.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_el_8_0_20.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_logging_juli_8_0_20.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_0_20.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_apache_tomcat_tomcat_jdbc_8_0_20.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_apache_tomcat_tomcat_juli_8_0_20.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_aspectj_aspectjrt_1_8_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_aspectj_aspectjweaver_1_8_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_hibernate_hibernate_core_4_3_8_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_hibernate_hibernate_entitymanager_4_3_8_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_slf4j_jcl_over_slf4j_1_7_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_slf4j_jul_to_slf4j_1_7_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_slf4j_log4j_over_slf4j_1_7_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_slf4j_slf4j_api_1_7_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_boot_spring_boot_1_2_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_boot_spring_boot_autoconfigure_1_2_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_1_2_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_aop_1_2_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_data_jpa_1_2_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_hateoas_1_2_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_jdbc_1_2_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_logging_1_2_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_test_1_2_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_tomcat_1_2_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_web_1_2_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_data_spring_data_commons_1_9_2_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_data_spring_data_jpa_1_7_2_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_spring_aop_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_spring_aspects_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_spring_beans_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_spring_context_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_spring_core_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_spring_expression_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_spring_jdbc_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_spring_orm_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_spring_test_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_spring_tx_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_spring_web_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\.idea\libraries\Maven__org_springframework_spring_webmvc_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\App.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\conf\factory\AddressFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\conf\factory\AuthorFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\conf\factory\BookFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\conf\factory\CopyFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\conf\factory\DVDFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\conf\factory\LibrarianFatory.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\conf\factory\LoanFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\conf\factory\MemberFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\conf\factory\PublisherFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\conf\factory\ReservationFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\Address$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\Address.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\Author$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\Author.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\Book$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\Book.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\Copy$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\Copy.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\DVD$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\DVD.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\Librarian$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\Librarian.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\Loan$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\Loan.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\Member$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\Member.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\Publisher$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\Publisher.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\Reservation$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Impl\Reservation.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\classes\za\ac\cput\LibrarySystem\domain\Person.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\test-classes\za\ac\cput\LibrarySystem\AppTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\test-classes\za\ac\cput\LibrarySystem\DomainTestSuite.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\test-classes\za\ac\cput\LibrarySystem\domain\AddressTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\test-classes\za\ac\cput\LibrarySystem\domain\AuthorTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\test-classes\za\ac\cput\LibrarySystem\domain\BookTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\test-classes\za\ac\cput\LibrarySystem\domain\CopyTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\test-classes\za\ac\cput\LibrarySystem\domain\DVDTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\test-classes\za\ac\cput\LibrarySystem\domain\LibrarianTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\test-classes\za\ac\cput\LibrarySystem\domain\LoanTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\test-classes\za\ac\cput\LibrarySystem\domain\MemberTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\test-classes\za\ac\cput\LibrarySystem\domain\PublisherTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Yongama\Desktop\LibrarySystem\target\test-classes\za\ac\cput\LibrarySystem\domain\ReservationTest.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/api/BookPage.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/api/BookPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/services/BookService.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/services/BookService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/services/Impl/BookServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/services/Impl/BookServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/LibrarySystem/services/BookServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/LibrarySystem/services/BookServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibrarySystem.iml" afterPath="$PROJECT_DIR$/LibrarySystem.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/api/LoanPage.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/api/LoanPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/services/LoanService.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/services/LoanService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/services/Impl/LoanServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/services/Impl/LoanServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/LibrarySystem/services/LoanServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/LibrarySystem/services/LoanServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/RepositoryTestSuite.xml" afterPath="$PROJECT_DIR$/src/test/resources/RepositoryTestSuite.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/api/HomePage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/api/LandingPage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_4_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_4_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_4_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_0_26.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_0_26.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_logging_juli_8_0_26.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_0_26.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_8_0_26.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_0_26.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_4_3_11_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_4_3_11_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_12.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_12.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_12.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_12.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_1_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_1_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_1_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_1_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_hateoas_1_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_9_3_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_7_3_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_1_7_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_4_1_7_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_1_7_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_1_7_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_1_7_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_1_7_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_1_7_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_1_7_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_1_7_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_1_7_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_1_7_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_1_7_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.openshift/action_hooks/deploy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.openshift/action_hooks/start" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.openshift/action_hooks/stop" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LibrarySystem.iws" />
@@ -173,8 +126,8 @@
       <file leaf-file-name="BookServiceTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/za/ac/cput/LibrarySystem/services/BookServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47619048">
-              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7619048">
+              <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -518,7 +471,7 @@
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -1134,7 +1087,7 @@
       <workItem from="1442081572381" duration="15243000" />
       <workItem from="1442421076501" duration="840000" />
       <workItem from="1442603171096" duration="91000" />
-      <workItem from="1442606115398" duration="9744000" />
+      <workItem from="1442606115398" duration="10844000" />
     </task>
     <task id="LOCAL-00001" summary="just a test">
       <created>1430507420029</created>
@@ -1190,11 +1143,17 @@
       <option name="project" value="LOCAL" />
       <updated>1442617666857</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added kaboso things for open shift">
+      <created>1442618224352</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1442618224352</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="300189000" />
+    <option name="totallyTimeSpent" value="301289000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1692,8 +1651,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/za/ac/cput/LibrarySystem/services/BookServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47619048">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7619048">
+          <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
           <folding />
         </state>
       </provider>
