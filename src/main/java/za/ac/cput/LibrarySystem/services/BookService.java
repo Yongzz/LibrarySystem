@@ -10,5 +10,12 @@ import java.util.List;
  */
 public interface BookService {
     List<Book> getBooks();
+    public Book findById(Long id);
+
+    public Book save(Book entity);
+
+    public Book update(Book entity);
+
+    public void delete(Book entity);
     List<Copy> getCopies(Long ID);
 }

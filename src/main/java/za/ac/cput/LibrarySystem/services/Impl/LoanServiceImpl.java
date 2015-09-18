@@ -39,6 +39,26 @@ public class LoanServiceImpl implements LoanService {
     public Copy getCopy(Long ID) {
         return loanRepo.findOne(ID).getCopy();
     }
+    @Override
+    public Loan findById(Long id) {
+        return loanRepo.findOne(id);
+    }
+
+    @Override
+    public Loan save(Loan entity) {
+        return loanRepo.save(entity);
+    }
+
+    @Override
+    public Loan update(Loan entity) {
+        return loanRepo.save(entity);
+    }
+
+    @Override
+    public void delete(Loan entity) {
+        loanRepo.delete(entity);
+
+    }
 
 
 }

@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.springframework.test.context.web.WebAppConfiguration;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import za.ac.cput.LibrarySystem.App;
 import za.ac.cput.LibrarySystem.conf.factory.CopyFactory;
@@ -55,6 +56,12 @@ public class LoanServiceTest extends AbstractTestNGSpringContextTests {
     public void testBookCopies() throws Exception {
         Member member = service.getMember(id);
         org.testng.Assert.assertEquals(member.getFirstName(), "Yongama");
+
+    }
+
+    @Test(dependsOnMethods = "testBookCopies")
+    public void tearDown() throws Exception {
+        repository.deleteAll();
 
     }
 }

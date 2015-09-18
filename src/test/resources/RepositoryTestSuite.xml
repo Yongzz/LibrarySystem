@@ -10,6 +10,8 @@
 			<class name="za.ac.cput.LibrarySystem.repostory.TestCrudLoan" />
 			<class name="za.ac.cput.LibrarySystem.repostory.TestCrudReservation" />
 			<class name="za.ac.cput.LibrarySystem.repostory.TestCrudMember" />
+			<class name="za.ac.cput.LibrarySystem.services.BookServiceTest" />
+			<class name="za.ac.cput.LibrarySystem.services.BookServiceTest" />
 		</classes>
 	</test>
  

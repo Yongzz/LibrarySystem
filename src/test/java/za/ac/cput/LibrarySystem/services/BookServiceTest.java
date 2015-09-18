@@ -76,4 +76,9 @@ public class BookServiceTest extends AbstractTestNGSpringContextTests{
 
     }
 
+    @Test(dependsOnMethods = "testBookCopies")
+    public void tearDown() throws Exception {
+        rep.deleteAll();
+
+    }
 }

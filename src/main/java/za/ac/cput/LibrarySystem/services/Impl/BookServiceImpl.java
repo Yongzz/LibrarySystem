@@ -28,6 +28,28 @@ public class BookServiceImpl implements BookService{
         return bookList;
     }
 
+    @Override
+    public Book findById(Long id) {
+        return bookRepository.findOne(id);
+    }
+
+    @Override
+    public Book save(Book entity) {
+        return bookRepository.save(entity);
+    }
+
+    @Override
+    public Book update(Book entity) {
+        return bookRepository.save(entity);
+    }
+
+    @Override
+    public void delete(Book entity) {
+        bookRepository.delete(entity);
+
+    }
+
+
     public List<Copy> getCopies(Long ID) {
         return bookRepository.findOne(ID).getCopies();
     }
