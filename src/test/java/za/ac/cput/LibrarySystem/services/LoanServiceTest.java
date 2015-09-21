@@ -29,7 +29,7 @@ public class LoanServiceTest extends AbstractTestNGSpringContextTests {
     private LoanRepository repository;
     @Autowired
     private LoanService service;
-    @Test
+   /* @Test
     public void testCreate() throws Exception {
 
         Map<String,String> value = new HashMap<String, String>();
@@ -63,5 +63,5 @@ public class LoanServiceTest extends AbstractTestNGSpringContextTests {
     public void tearDown() throws Exception {
         repository.deleteAll();
 
-    }
+    }*/
 }

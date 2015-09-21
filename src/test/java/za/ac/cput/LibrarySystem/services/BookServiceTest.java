@@ -33,7 +33,7 @@ public class BookServiceTest extends AbstractTestNGSpringContextTests{
     private BookService service;
     private List<Copy> copies;
     private Book item;
-
+/*
 
     @BeforeMethod
     public void setUp() throws Exception {
@@ -80,5 +80,5 @@ public class BookServiceTest extends AbstractTestNGSpringContextTests{
     public void tearDown() throws Exception {
         rep.deleteAll();
 
-    }
+    }*/
 }
