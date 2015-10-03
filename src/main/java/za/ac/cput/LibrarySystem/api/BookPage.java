@@ -108,15 +108,15 @@ public class BookPage {
 
         if (currentBook==null) {
             System.out.println("Book with id " + id + " not found");
-            return new ResponseEntity<Book>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<Book>(Subject,HttpStatus.NOT_FOUND);
         }
 
         Book updatedBook = new Book
                 .Builder(currentBook.getISBN())
                 .copy(currentBook)
                 .build();
-        service.update(currentBook);
-        return new ResponseEntity<Book>(currentBook, HttpStatus.OK);
+        service.update(updatedBook);
+        return new ResponseEntity<Book>(updatedBook, HttpStatus.OK);
     }
 
     //------------------- Delete a Book --------------------------------------------------------

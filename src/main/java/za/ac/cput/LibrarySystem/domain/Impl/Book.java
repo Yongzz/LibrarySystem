@@ -14,7 +14,7 @@ import java.util.List;
 @Entity
 public class Book extends LibraryItem {
 
-    @Column(unique = true)
+   // @Column(unique = true)
     private String ISBN;
     @Embedded
     private Author author;
@@ -35,9 +35,6 @@ public class Book extends LibraryItem {
         publisher =builder.publisher;
     }
 
-    public Long getID(){
-        return ID;
-    }
     public String getISBN() {
         return ISBN;
     }
@@ -74,6 +71,10 @@ public class Book extends LibraryItem {
 
         public Builder ID(Long value){
             this.ID = value;
+            return this;
+        }
+        public Builder ISBN(String value){
+            this.ISBN = value;
             return this;
         }
         public Builder tittle(String value){
