@@ -136,7 +136,7 @@ public class Loan implements Serializable {
     @Override
     public String toString() {
         return "Loan{" +
-                "ID=" + ID +
+                "id=" + ID +
                 ", LoanDate='" + loanDate + '\'' +
                 '}';
     }

@@ -26,8 +26,8 @@ public class ReservationPage {
         return service.getReservation();
     }
     @RequestMapping(value = "/member", method = RequestMethod.GET)
-    Member getMember(@PathVariable Long ID){
-        return service.getMember(ID);
+    Member getMember(@PathVariable Long id){
+        return service.getMember(id);
     }
 
 }*/

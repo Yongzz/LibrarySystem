@@ -13,7 +13,7 @@ import java.io.Serializable;
 public abstract class LibraryItem implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long ID;
+    protected Long id;
     protected String tittle;
     protected String subject;
 
@@ -26,8 +26,8 @@ public abstract class LibraryItem implements Serializable {
         return subject;
     }
 
-    public Long getID() {
-        return ID;
+    public Long getId() {
+        return id;
     }
 
     @Override
@@ -37,19 +37,19 @@ public abstract class LibraryItem implements Serializable {
 
         LibraryItem item = (LibraryItem) o;
 
-        return !(ID != null ? !ID.equals(item.ID) : item.ID != null);
+        return !(id != null ? !id.equals(item.id) : item.id != null);
 
     }
 
     @Override
     public int hashCode() {
-        return ID != null ? ID.hashCode() : 0;
+        return id != null ? id.hashCode() : 0;
     }
 
     @Override
     public String toString() {
         return "LibraryItem{" +
-                "ID=" + ID +
+                "id=" + id +
                 ", tittle='" + tittle + '\'' +
                 '}';
     }

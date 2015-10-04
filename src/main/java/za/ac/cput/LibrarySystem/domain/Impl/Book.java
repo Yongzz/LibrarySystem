@@ -5,7 +5,6 @@ import za.ac.cput.LibrarySystem.domain.LibraryItem;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,7 +25,7 @@ public class Book extends LibraryItem implements Serializable {
 
     private Book(){}
     public Book(Builder builder){
-        this.ID = builder.ID;
+        this.id = builder.id;
         tittle = builder.tittle;
         copies = builder.copies;
         subject = builder.subject;
@@ -56,7 +55,7 @@ public class Book extends LibraryItem implements Serializable {
     }
 
     public static class Builder{
-        private Long ID;
+        private Long id;
         private String tittle;
         private String subject;
         private String ISBN;
@@ -70,7 +69,7 @@ public class Book extends LibraryItem implements Serializable {
         }
 
         public Builder ID(Long value){
-            this.ID = value;
+            this.id = value;
             return this;
         }
         public Builder ISBN(String value){
@@ -103,7 +102,7 @@ public class Book extends LibraryItem implements Serializable {
         }
 
         public Builder copy(Book value){
-            this.ID = value.ID;
+            this.id = value.id;
             this.tittle = value.tittle;
             this.subject = value.subject;
             this.ISBN = value.ISBN;
@@ -124,20 +123,20 @@ public class Book extends LibraryItem implements Serializable {
 
         Book book = (Book) o;
 
-        if (ID != null ? !ID.equals(book.ID) : book.ID != null) return false;
+        if (id != null ? !id.equals(book.id) : book.id != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        return ID != null ? ID.hashCode() : 0;
+        return id != null ? id.hashCode() : 0;
     }
 
     @Override
     public String toString() {
         return "Book{" +
-                "ID=" + ID +
+                "id=" + id +
                 ", tittle='" + tittle + '\'' +
                 '}';
     }

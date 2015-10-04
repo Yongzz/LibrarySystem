@@ -29,7 +29,7 @@ public class TestCrudDVD extends AbstractTestNGSpringContextTests{
                 .subject("Psychology")
                 .build();
         dvdRepository.save(dvd);
-        id = dvd.getID();
+        id = dvd.getId();
         Assert.assertNotNull(dvd.getTittle());
     }
 

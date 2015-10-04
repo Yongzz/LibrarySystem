@@ -42,7 +42,7 @@ public class BookPage {
                     .tittle(book.getTittle())
                     .publisher(book.getPublisher())
                     .subject(book.getSubject())
-                    .resID(book.getID())
+                    .resID(book.getId())
                     .build();
             Link link = new
                     Link("http://localhost:8080/book/"+resource.getResID().toString())
@@ -94,7 +94,7 @@ public class BookPage {
         service.save(book);
 
         HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(ucBuilder.path("/book/{id}").buildAndExpand(book.getID()).toUri());
+        headers.setLocation(ucBuilder.path("/book/{id}").buildAndExpand(book.getId()).toUri());
         return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
     }
 

@@ -12,7 +12,7 @@ import java.util.List;
 public class Author implements  Serializable {
     /*@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long ID;*/
+    private Long id;*/
     private String lName;
     private String fName;
 
@@ -70,20 +70,20 @@ public class Author implements  Serializable {
 
         Author author = (Author) o;
 
-        if (ID != null ? !ID.equals(author.ID) : author.ID != null) return false;
+        if (id != null ? !id.equals(author.id) : author.id != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        return ID != null ? ID.hashCode() : 0;
+        return id != null ? id.hashCode() : 0;
     }
 
     @Override
     public String toString() {
         return "Author{" +
-                "ID='" + ID + '\'' +
+                "id='" + id + '\'' +
                 ", lName='" + lName + '\'' +
                 ", fName='" + fName + '\'' +
                 '}';

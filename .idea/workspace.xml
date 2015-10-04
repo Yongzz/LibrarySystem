@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9791d2b3-078c-47de-a719-3fa3bde42ab5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/Impl/Author.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/Impl/Author.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/Impl/Book.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/Impl/Book.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/api/LoanPage.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/api/LoanPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/api/BookPage.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/api/BookPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/LibrarySystem/services/BookServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/LibrarySystem/services/BookServiceTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/Impl/DVD.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/Impl/DVD.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/Impl/Librarian.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/Impl/Librarian.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/LibraryItem.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/LibraryItem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/Impl/Loan.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/Impl/Loan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/LibrarySystem/services/LoanServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/LibrarySystem/services/LoanServiceTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/api/ReservationPage.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/api/ReservationPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/LibrarySystem/repostory/TestCrudBook.java" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/LibrarySystem/repostory/TestCrudBook.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/LibrarySystem/repostory/TestCrudDVD.java" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/LibrarySystem/repostory/TestCrudDVD.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LibrarySystem.iws" />
@@ -86,8 +96,8 @@
       <file leaf-file-name="Book.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/Impl/Book.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3406193">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.712204">
+              <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -98,6 +108,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LibraryItem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/LibraryItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -117,7 +137,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/Impl/DVD.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -171,7 +191,6 @@
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/services/MemberService.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/services/DVDService.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/services/LibrarianService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/LibraryItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/Impl/DVD.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/model/BookResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/model/CopyResource.java" />
@@ -204,6 +223,7 @@
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/Impl/Librarian.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/api/LoanPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/services/Impl/LoanServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/LibraryItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/Impl/Book.java" />
       </list>
     </option>
@@ -1142,7 +1162,7 @@
       <workItem from="1442872971086" duration="93000" />
       <workItem from="1443864735768" duration="7332000" />
       <workItem from="1443883347021" duration="1282000" />
-      <workItem from="1443942968586" duration="7775000" />
+      <workItem from="1443942968586" duration="8363000" />
     </task>
     <task id="LOCAL-00001" summary="just a test">
       <created>1430507420029</created>
@@ -1228,11 +1248,17 @@
       <option name="project" value="LOCAL" />
       <updated>1443950573424</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="password added to librarian">
+      <created>1443959810081</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1443959810081</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="319746000" />
+    <option name="totallyTimeSpent" value="320334000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1261,6 +1287,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2427481" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2579425" sideWeight="0.47674417" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275563" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1276,7 +1303,6 @@
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10590015" sideWeight="0.5232558" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32718122" sideWeight="0.4969651" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1583,14 +1609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/LibraryItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/model/ReservationResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1620,7 +1638,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="32" selection-end-column="52" />
           <folding>
-            <element signature="e#577#593#0" expanded="true" />
+            <element signature="e#577#593#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1716,7 +1734,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/Impl/DVD.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1729,10 +1747,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/LibraryItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/LibrarySystem/domain/Impl/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3406193">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.712204">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
           <folding />
         </state>
       </provider>

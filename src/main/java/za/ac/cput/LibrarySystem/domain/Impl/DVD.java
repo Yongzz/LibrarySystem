@@ -4,7 +4,6 @@ package za.ac.cput.LibrarySystem.domain.Impl;
 import za.ac.cput.LibrarySystem.domain.LibraryItem;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 /**
  * Created by student on 2015/04/17.
@@ -20,7 +19,7 @@ public class DVD extends LibraryItem {
     private DVD(){}
 
     public DVD(Builder builder){
-        ID = builder.ID;
+        id = builder.ID;
         tittle= builder.tittle;
         subject = builder.subject;
         code = builder.code;
@@ -99,20 +98,20 @@ public class DVD extends LibraryItem {
 
         DVD dvd = (DVD) o;
 
-        if (ID != null ? !ID.equals(dvd.ID) : dvd.ID != null) return false;
+        if (id != null ? !id.equals(dvd.id) : dvd.id != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        return ID != null ? ID.hashCode() : 0;
+        return id != null ? id.hashCode() : 0;
     }
 
     @Override
     public String toString() {
         return "DVD{" +
-                "ID=" + ID +
+                "id=" + id +
                 ", tittle='" + tittle + '\'' +
                 '}';
     }

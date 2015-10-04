@@ -50,7 +50,7 @@ public class TestCrudBook extends AbstractTestNGSpringContextTests {
                 .copies(copyList)
                 .build();
         rep.save(item);
-        idd = item.getID();
+        idd = item.getId();
         Assert.assertNotNull(item.getSubject());
     }
 
