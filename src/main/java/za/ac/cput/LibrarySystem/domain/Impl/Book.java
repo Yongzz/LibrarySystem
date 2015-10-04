@@ -12,7 +12,7 @@ import java.util.List;
  * Created by student on 2015/04/17.
  */
 @Entity
-public class Book extends LibraryItem {
+public class Book extends LibraryItem implements Serializable {
 
    // @Column(unique = true)
     private String ISBN;

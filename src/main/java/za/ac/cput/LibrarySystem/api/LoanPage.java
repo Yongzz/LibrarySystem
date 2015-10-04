@@ -31,11 +31,11 @@ public class LoanPage {
 
     @RequestMapping(value = "/loans/", method = RequestMethod.GET)
     public ResponseEntity<List<Loan>> listAllLoans() {
-        List<Loan> Subjects = services.getLoans();
-        if(Subjects.isEmpty()){
+        List<Loan> loans = services.getLoans();
+        if(loans.isEmpty()){
             return new ResponseEntity<List<Loan>>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
         }
-        return new ResponseEntity<List<Loan>>(Subjects, HttpStatus.OK);
+        return new ResponseEntity<List<Loan>>(loans, HttpStatus.OK);
     }
 
     //-------------------Retrieve Single Subject--------------------------------------------------------
