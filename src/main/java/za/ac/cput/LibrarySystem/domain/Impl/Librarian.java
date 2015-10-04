@@ -15,8 +15,8 @@ public class Librarian implements Serializable {
     private Long ID;
     private String lName;
     private String fName;
-    @Column(unique = true)
     private String librarianID;
+    private String passoword;
     private Librarian(){
 
     }
@@ -25,6 +25,7 @@ public class Librarian implements Serializable {
         librarianID = builder.librarianID;
         lName = builder.lName;
         fName = builder.fName;
+        passoword = builder.password;
     }
     public Long getID() {
         return ID;
@@ -42,11 +43,16 @@ public class Librarian implements Serializable {
         return librarianID;
     }
 
+    public String getPassoword() {
+        return passoword;
+    }
+
     public static class Builder{
         private Long ID;
         private String librarianID;
         private String lName;
         private String fName;
+        private String password;
         private List<Loan> loans;
 
 
@@ -58,6 +64,11 @@ public class Librarian implements Serializable {
             return this;
         }
 
+        public Builder passoword(String value)
+        {
+            this.password = value;
+            return this;
+        }
         public Builder lName(String value){
             this.lName = value;
             return this;
@@ -76,6 +87,7 @@ public class Librarian implements Serializable {
             this.librarianID = librarian.librarianID;
             this.fName = librarian.fName;
             this.lName = librarian.lName;
+            this.password = librarian.passoword;
             return this;
         }
         public Librarian build(){
