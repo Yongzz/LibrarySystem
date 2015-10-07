@@ -68,7 +68,7 @@ public class Book extends LibraryItem implements Serializable {
             this.ISBN = ISBN;
         }
 
-        public Builder ID(Long value){
+        public Builder Id(Long value){
             this.id = value;
             return this;
         }

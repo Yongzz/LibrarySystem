@@ -51,17 +51,17 @@ public class LoanPage {
         return new ResponseEntity<Loan>(loan, HttpStatus.OK);
     }
 /*
-    @RequestMapping(value = "/{ID}/librarian", method = RequestMethod.GET)
-    public Librarian getLibrarian(@PathVariable Long ID) {
-        return services.getLibrarian(ID);
+    @RequestMapping(value = "/{Id}/librarian", method = RequestMethod.GET)
+    public Librarian getLibrarian(@PathVariable Long Id) {
+        return services.getLibrarian(Id);
     }
-    @RequestMapping(value = "/{ID}/member", method = RequestMethod.GET)
-    public Member getMember(@PathVariable Long ID) {
-        return services.getMember(ID);
+    @RequestMapping(value = "/{Id}/member", method = RequestMethod.GET)
+    public Member getMember(@PathVariable Long Id) {
+        return services.getMember(Id);
     }
-    @RequestMapping(value = "/{ID}/copy", method = RequestMethod.GET)
-    public Copy getCopy(@PathVariable Long ID) {
-        return services.getCopy(ID);
+    @RequestMapping(value = "/{Id}/copy", method = RequestMethod.GET)
+    public Copy getCopy(@PathVariable Long Id) {
+        return services.getCopy(Id);
     }
     @RequestMapping(value = "/all_loans",method = RequestMethod.GET)
     public List<LoanResource> getBooks(){
@@ -73,16 +73,16 @@ public class LoanPage {
                     .copy(loan.getCopy())
                     .dueDate(loan.getDueDate())
                     .loanDate(loan.getLoanDate())
-                    .resID(loan.getID())
+                    .resId(loan.getId())
                     .build();
             Link link = new
-                    Link("http://localhost:8080/loan/"+resource.getresID()+"/librarian")
+                    Link("http://localhost:8080/loan/"+resource.getresId()+"/librarian")
                     .withRel("booker");
             Link link1 = new
-                    Link("http://localhost:8080/loan/"+resource.getresID()+"/member")
+                    Link("http://localhost:8080/loan/"+resource.getresId()+"/member")
                     .withRel("booker");
             Link link2 = new
-                    Link("http://localhost:8080/loan/"+resource.getresID()+"/copy")
+                    Link("http://localhost:8080/loan/"+resource.getresId()+"/copy")
                     .withRel("booker");
             resource.add(link);
             resource.add(link1);
@@ -107,7 +107,7 @@ public class LoanPage {
         services.save(loan);
 
         HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(ucBuilder.path("/loan/{id}").buildAndExpand(loan.getID()).toUri());
+        headers.setLocation(ucBuilder.path("/loan/{id}").buildAndExpand(loan.getId()).toUri());
         return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
     }
 

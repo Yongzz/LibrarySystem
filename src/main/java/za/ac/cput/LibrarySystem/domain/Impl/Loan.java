@@ -12,7 +12,7 @@ import java.util.List;
 public class Loan implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long ID;
+    private Long Id;
     private String loanDate;
     private String dueDate;
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -28,7 +28,7 @@ public class Loan implements Serializable {
     private Loan(){}
     public Loan(Builder builder){
 
-        ID = builder.ID;
+        Id = builder.Id;
         loanDate = builder.loanDate;
         member = builder.member;
         librarian= builder.librarian;
@@ -37,8 +37,8 @@ public class Loan implements Serializable {
 
 
     }
-    public Long getID() {
-        return ID;
+    public Long getId() {
+        return Id;
     }
 
     public String getLoanDate() {
@@ -63,7 +63,7 @@ public class Loan implements Serializable {
 
     public static class Builder{
 
-        Long ID;
+        Long Id;
         private String loanDate;
         private String dueDate;
         private Member member;
@@ -75,8 +75,8 @@ public class Loan implements Serializable {
             this.member = member;
         }
 
-        public Builder ID(Long value){
-            this.ID = value;
+        public Builder Id(Long value){
+            this.Id = value;
             return this;
         }
 
@@ -124,19 +124,19 @@ public class Loan implements Serializable {
 
         Loan loan = (Loan) o;
 
-        return !(ID != null ? !ID.equals(loan.ID) : loan.ID != null);
+        return !(Id != null ? !Id.equals(loan.Id) : loan.Id != null);
 
     }
 
     @Override
     public int hashCode() {
-        return ID != null ? ID.hashCode() : 0;
+        return Id != null ? Id.hashCode() : 0;
     }
 
     @Override
     public String toString() {
         return "Loan{" +
-                "id=" + ID +
+                "id=" + Id +
                 ", LoanDate='" + loanDate + '\'' +
                 '}';
     }

@@ -50,7 +50,7 @@ public class TestCrudLoan extends AbstractTestNGSpringContextTests{
         Loan loan = LoanFactory.createLoan(value, member, librarian,copy);
 
         repository.save(loan);
-        id = loan.getID();
+        id = loan.getId();
         Assert.assertNotNull(loan.getDueDate());
     }
 
