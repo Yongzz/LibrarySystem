@@ -50,7 +50,7 @@ public class LoanPage {
         }
         return new ResponseEntity<Loan>(loan, HttpStatus.OK);
     }
-
+/*
     @RequestMapping(value = "/{ID}/librarian", method = RequestMethod.GET)
     public Librarian getLibrarian(@PathVariable Long ID) {
         return services.getLibrarian(ID);
@@ -91,8 +91,8 @@ public class LoanPage {
         }
         return resources;
     }
-
-    //-------------------Create a Subject--------------------------------------------------------
+*/
+    //-------------------Create a Loan--------------------------------------------------------
 
     @RequestMapping(value = "/loan/create", method = RequestMethod.POST)
     public ResponseEntity<Void> createBook(@RequestBody Loan loan,    UriComponentsBuilder ucBuilder) {

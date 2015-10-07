@@ -25,7 +25,7 @@ public class BookPage {
 
     @Autowired BookService service;
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+   /* @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public List<Copy> getCopies(@PathVariable Long id){
         return service.getCopies(id);
     }
@@ -52,7 +52,7 @@ public class BookPage {
         }
         return resources;
     }
-
+*/
     //-------------------Retrieve All Book--------------------------------------------------------
 
     @RequestMapping(value = "/books/", method = RequestMethod.GET)
